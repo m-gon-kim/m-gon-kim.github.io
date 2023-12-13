@@ -1,0 +1,156 @@
+h1 {
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+h2,
+h3,
+h4 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #556655;
+}
+
+.wrapper {
+    width: 1000px;
+    padding: 20px;
+    border: 2px solid #eeeeee;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.contentWrapper {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.contentWrapper li {
+    margin-left: 20px;
+}
+
+.profileWrapper {
+    overflow-y: auto;
+}
+
+.leftDiv {
+    float: left;
+}
+
+.rightDiv {
+    float: right;
+}
+
+.profileInfo {
+    width: 550px;
+}
+
+.profilePic {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    overflow: hidden;
+}
+
+.profileWrapper img {
+    position: relative;
+    top: -25px;
+    width: 100%;
+}
+
+.cvWrapper {
+    width: calc(210mm - 80px);
+    margin: auto;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.cvWrapper>.michigan {
+    font-size: 30px;
+    text-align: center;
+}
+
+.cvWrapper>.michigan>hr {
+    font-size: 10px;
+}
+
+.cvName {
+    text-align: center;
+    width: 600px;
+    margin: auto;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.michigan_name_left {
+    float: left;
+    font-size: 15px;
+}
+
+.cvName .michigan {
+    font-size: 30px;
+    margin: auto;
+}
+
+.cvName hr {
+    font-size: 10px;
+}
+
+.cvName .nameContact {
+    font-size: 15px;
+}
+
+.cvInfoWrapper {
+    width: 100%;
+    overflow-y: auto;
+    margin-bottom: 18px;
+}
+
+.cvInfoTitle {
+    width: 100%;
+    margin-bottom: 5px;
+    border-bottom: solid #eeeeee 1px;
+}
+
+.cvInfoContentsWrapper {
+    float: left;
+    width: 99%;
+    margin-left: 1%;
+}
+
+.cvInfoContentsRow {
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.cvInfoContents {
+    float: left;
+    width: 75%;
+}
+
+.scholarship>.cvInfoContents {
+    width: 78%;
+}
+
+.cvInfoContents li {
+    margin-top: 2px;
+    margin-left: 2%;
+}
+
+.cvInfoContentsDate {
+    float: right;
+    width: 25%;
+    text-align: right;
+}
+
+.scholarship>.cvInfoContentsDate {
+    width: 22%;
+}
+
+.picMouseOverWrapper {
+    background-size: cover;
+    background-position: center;
+}

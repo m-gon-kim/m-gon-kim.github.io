@@ -16,7 +16,7 @@ a {
 }
 
 .wrapper {
-    width: 1000px;
+    width: 800px;
     padding: 20px;
     border: 2px solid #eeeeee;
     margin: auto;
@@ -48,12 +48,21 @@ a {
 .profileInfo {
     width: 550px;
 }
+.profileInfo a{
+    text-decoration: none;
+}
+.profileInfo a, a:visited, a:hover, a:active{
+    color: inherit;
+  }
 
 .profilePic {
     width: 200px;
     height: 200px;
     border-radius: 200px;
     overflow: hidden;
+    background-size:cover;
+    background-position: 50% -25px;
+    
 }
 
 .profileWrapper img {
@@ -154,3 +163,159 @@ a {
     background-size: cover;
     background-position: center;
 }
+
+.pubContentsWrapper{
+    width: 91%;
+    height: auto;
+    overflow-y: auto;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: left;
+    padding-bottom:30px;
+    border-bottom: 1px dashed gray;
+
+}
+.researchTitle{
+    width: calc(100% - 110px);
+    float:left;
+}
+.researchThumbnailBlockWrapper{
+    width: 100px;
+    height: 125px;
+    float:right;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.researchThumbnailBlock{
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.researchThumbnailWrapper2{
+    width: 100%;
+    height: auto;
+    text-align: Center;
+}
+.researchThumbnailWrapper{    
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+}
+.researchViewMoreBtn{
+    width: 100px;
+    height: 23px;
+    text-align: center;
+    cursor: pointer;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    letter-spacing: -.05rem;
+    margin-top: auto;
+}
+.researchDetailWrapper{
+    margin:auto;
+    margin-top: 10px;
+    border-top: 3px dashed lightgray;
+    width: 95%;
+    height: auto;
+    overflow-y: auto;
+    padding-top:10px;
+    display: none;
+}
+.researchPaperWrapper{
+    width: 91%;
+    margin:auto;
+    font-size: 0.8em;
+}
+.researchPaperWrapper ul, li, h3{
+	padding: 0; 
+	margin: 0;
+}
+.star_lab {
+    width: 100px;
+    height: 100px; /* Full viewport height */
+    position: relative;
+    animation: backgroundFade 4s infinite; /* Adjust time as needed */
+    background-size: cover;
+  }
+  
+  /* Initial background image (img1) */
+  .star_lab::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('pics/cat_d.png'); /* First image */
+    background-size: cover;
+    background-size: 170% 130%;
+    background-position: 65% 30%;
+    background-repeat: no-repeat;
+    animation: fadeOut 2s infinite;
+  }
+  
+  /* Second background image (img2) */
+  .star_lab::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('pics/cat_s.png'); /* Second image */
+    background-size: cover;
+    background-position: 50% 50%;
+    animation: fadeIn 2s infinite;
+    opacity: 0;
+  }
+  
+  /* Animation for fading out the first image */
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  /* Animation for fading in the second image */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .remoteWrapper{
+    width: 180px;
+    height:165px;
+    position: fixed;
+    padding:10px;
+    margin-left:15px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    line-height: 2em;
+    left: 1110px;
+  }
+  .remoteWrapper li{
+    cursor: pointer;
+  }
+  .remoteWrapper a{
+    text-decoration: none;
+  }
+  .remoteWrapper a, a:visited, a:hover, a:active{
+    color: inherit;
+  }

@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Crete Round' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" as="script">
@@ -17,107 +21,477 @@
     <title>m.gon.kim</title>
 
 </head>
-
 <body style="overflow-y:scroll;">
+    <div class="remoteWrapper">
+        <li><a href="cv/2024/index.html" target='_blank'>Curriculum Vitae</a></li>
+        <li onclick="window.scrollTo(0, 0);">About</li>
+        <li><a href="#projects">Projects</a> </li>
+        <li><a href="#workexp">Work Experiences</a></li>
+        <li><a href="#extraact">Extra Activities</a></li>
+    </div>
 
     <div class="wrapper ">
         <div class="contentWrapper profileWrapper">
             <div class="leftDiv profileInfo">
-                <h1>Myoung Gon Kim</h1>
-                Phd. student at Media lab<br>
-                Department of Computer Science and Engineering, Korea University <br>
-                WooJung Information & Communications Bldg., Korea Univ. 145, Anam-ro, Seongbuk-gu, Seoul, 02841, Rep. of Korea<br><br>
-                email: m_gon_kim@korea.ac.kr<br> <a href='cv' target='_blank'>CV</a>
-                <!-- Software engineer at<br> Navigation task group, Robot intelligence team, Samsung Research Center<br> 56th SeongChon street, SeoCho-gu, Seoul, Republic of Korea<br><br> email: m_gon_kim@korea.ac.kr<br> <a href='cv' target='_blank'>CV</a>, -->
+                <h1><u>Myoung Gon</u> Kim</h1>
+                Phd. candidate at Media lab<br>
+                Department of Computer Science and Engineering, Korea University <br><br>
+                contact: m_gon_kim@korea.ac.kr<br> <a href='cv/2024/index.html' target='_blank'>CV</a> /                 
                 <a href='https://scholar.google.com/citations?user=AwOX9ocAAAAJ' target='_blank'>Google Scholar</a>
             </div>
-            <div class="rightDiv profilePic">
-                <img src='profilePic.png'>
+            <div class="rightDiv profilePic" style="background-image: url('profilePic.png');" onmouseover="backgroundImg(this, 'profilePic2.png');" onmouseout="backgroundImg(this, 'profilePic.png');">
+                <!-- <img src='profilePic.png' > -->
             </div>
         </div>
 
-        <div class="contentWrapper">
+        <div class="contentWrapper" style = "height:auto; overflow-y: auto;">
             <h2>Research Interests</h2>
-            <hr>
-            <li>Simultaneous Localization And Mapping (SLAM)</li>
-            <li>Virtual/Augmented/Mixed Reality (XR)</li>
-            <li>Human Computer Interaction (HCI)</li>
+                <hr>
+            <div style = "width: 52%; height: auto; overflow-y: auto; float:left; border-right:1px dashed gray;">
+                <b style = 'margin-left: 10px;'>Computer Vision</b> for XR 
+                <li>3D Gaussian Splatting</li>
+                <li>Simultaneous Localization and Mapping (SLAM)</li>
+                <li>Sensor Fusion</li>
+            </div>
+            <div style = "width: 30%; height: auto; overflow-y: auto; float:left; margin-left:2%;">
+                <b style = 'margin-left: 10px;'>HCI</b> for XR
+                <li>Mid-air manipulation</li>
+                <li>Redirected walking</li>
+            </div>
         </div>
 
         <div class="contentWrapper">
-            <h2>Researches</h2>
+            <a name="projects"></a>
+            <h2>Projects</h2>
             <hr><br>
+            <div class = "researchThumbnailWrapper2">
+                <div class="pubContentsWrapper" style="margin-top: 0px;">
+                    <div class = "researchThumbnailWrapper">
+                        <div class = "researchTitle">
+                            <h3>XR solution for digital twin-based inspection</h3>
+                            <i style = "font-size: 0.9em;">Funded by Korea Radio Promotion Association <b>(RAPA)</b></i> <br>
+                            <i>May. ~ Dec. 2024</i><br><br>
+                            <li>SLAM / 3D Reconstruction</li>
+                        </div>
+                        <div class="researchThumbnailBlockWrapper">
+                            <div class = "researchThumbnailBlock" style="background-image: url('pics/post.png');"></div>
+                            <div class="researchViewMoreBtn" onClick="ResearchReadMore(this);">Read More 🔽</div>
+                        </div>
+                    </div>
+                    <div class = "researchDetailWrapper">
+                        <div style = "width: 100%; height:auto; overflow-y: auto; text-align: center; margin: auto;">
+                            <iframe width="650" height="400" src="https://www.youtube.com/embed/ODRu0XRrQPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div style = "width: 100%; height:auto; overflow-y: auto; text-align: center; margin: auto;">
+                            <iframe width="650" height="400" src="https://www.youtube.com/embed/1mnnYYwBTrE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <li>SLAM for pipes at factories</li>
+                        <li>Object tracking using BIM data at facilities</li>
+                        <br><br>
+                        <div class="researchPaperWrapper">
+                            <hr>
+                            <h2>Paper</h2>
+                            <ul>
+                                <li><h3>Superpixel-guided Sampling for Compact 3D Gaussian Splatting</h3></li>
+                            </ul>
+                            <p style="margin: 0px; margin-top: 5px; margin-left: 20px;">
+                                <b>Myoung Gon Kim</b>, SeungWon Jeong, Seohyeon Park, JungHyun Han <br>
+                                <b>ACM VRST</b>, Octoboer 9-11, 2024, Trier, Germany.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pubContentsWrapper">
+                    <div class = "researchThumbnailWrapper">
+                        <div class = "researchTitle" >
+                            <h3>Airflow simulation and visualization</h3>
+                            <i style = "font-size: 0.9em;">Funded by <b>LG Electronics</b></i> <br>
+                            <i>May. 2021 ~ Apr. 2025</i><br><br>
+                            <li>Camera tracking</li><li>HCI in AR</li><br>
+                        </div>
+                        <div class="researchThumbnailBlockWrapper" >
+                            <div class = "researchThumbnailBlock" style="background-image: url('pics/ac.png');"></div>
+                            <div class="researchViewMoreBtn" onClick="ResearchReadMore(this);" >Read More 🔽</div>
+                        </div>
+                    </div>
+                    <div class = "researchDetailWrapper">
+                        <div style = "width: 100%; height:auto; overflow-y: auto; text-align: center; margin: auto;">
+                            <iframe width="650" height="400" src="https://www.youtube.com/embed/ttMZiVrtUAM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+          
+                        <li>An air conditional is detected or manually installed in reconstructed room</li>
+                        <li>Airflow is physically simluated and visualized</li>
+                        <br>
+                        <br>
+                        <div class="researchPaperWrapper">
+                            <hr>
+                            <h2>Paper</h2>
+                            <ul>
+                                <li><h3>Virtual air conditioner’s airflow simulation and visualization in ar</h3></li>
+                            </ul>
+                            <p style="margin: 0px; margin-top: 5px; margin-left: 20px;">
+                                Joohwan Chae, Donghan Kim, Wooseok Jeong, Eunchan Jo, Won-Ki Jeong, JunYoung Choi, Seung-wook Kim, <b>Myoung Gon Kim</b>, Jae-Won Lee, Hyechan Lee, and JungHyun Han<br>
+                                <b>ACM VRST</b>, November 29-December 1, 2022, Tsukuba, Japan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pubContentsWrapper">
+                    <div class = "researchThumbnailWrapper">
+                        <div class = "researchTitle"style = "width : calc(100% - 160px);">
+                            <h3>Development of software for optimizing biometric data collection and analyzing motion data</h3>
+                            <i style = "font-size: 0.9em;">Funded by Korea Electronics Association <b>(KEA)</b></i> <br>
+                            <i>Jan. ~ Oct. 2023</i><br><br>
+                            <li>Pose estimation</li>
+                        </div>
+                        <div class="researchThumbnailBlockWrapper" style = "width:150px;">
+                            <div class = "researchThumbnailBlock" style = "background-image: url('pics/pose_estimation.png'); background-size: contain; width:150px;"></div>
+                            <div class="researchViewMoreBtn" onClick="ResearchReadMore(this);" style = "margin-left:50px;">Read More 🔽</div>
+                        </div>
+                    </div>
+                    <div class = "researchDetailWrapper">
+                        <div style = "width: 100%; height:auto; overflow-y: auto;  margin: auto;">
+                            <img src = 'pics/pose_app_1.png' width = 510 style="margin:auto; display: block;">
+                            <li style="margin-left:100px">Application for 3D human pose estimation</li><br><br>
+                            <img src = 'pics/pose_app_2.png' width = 510 style="margin:auto; display: block;">
+                            <li style="margin-left:100px">Editor for sync and trim the sequences of pose, EEG and PPG data</li>
+                        </div>
+                       
+                        
+                    </div>
+                </div>
+                <div class="pubContentsWrapper">
+                    <div class = "researchThumbnailWrapper">
+                        <div class = "researchTitle" style = "width : calc(100% - 160px);">
+                            <h3>Professional manpower training for VR·AR</h3>
+                            <i style = "font-size: 0.9em;">Funded by Korea Electronics Association <b>(KEA)</b></i> <br><br>
+                            <i>Aug. 2021 ~ Feb. 2025(WIP)</i><br><br>
+                            <li>Training and mentoring program for students in XR areas</li>
+                    </div>
+                        <div class="researchThumbnailBlockWrapper" style = "width:150px;">
+                            <div class = "researchThumbnailBlock" style="background-image: url('pics/KEA.jpg'); width:150px;"></div>
+                            <div class="researchViewMoreBtn" onClick="ResearchReadMore(this);" style = 'margin-left:50px'>Read More 🔽</div>
+                        </div>
+                    </div>
+                    <div class = "researchDetailWrapper">
+                        <div style = "width: 100%; height:auto; overflow-y: auto; text-align: center; margin: auto;">
+                            <img src = "pics/contest.gif" width="650px" height="365px">
+                        </div> 
+                        <li>Seminar and lecture in XR areas</li>
+                        <li>Annual workshop</li>
+                        <br><br>
 
-            <div style='overflow-y: auto; width: 80%; margin:auto; margin-bottom: 100px;'>
-                <div style=' width: 100%'>
-                    <h3>Virtual object sizes for efficient and convenient mid-air manipulation </h3>
-                    <i><u>MyoungGon Kim</u>, JiSeok Ryu, Jaemin Son, and JungHyun Han. </i><br> The Visual Computer 38.9-10 (2022): 3463-3474.<br><br>
-                    <iframe width="800" height="450" align="center" src="https://www.youtube.com/embed/jpt2sIaqGV0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
-                    <li>Degrees of freedom (DOF) during 3D object manipulation is studied</li>
-                    <li><b>“Switchable DOF,” “with DOF sepeartion”</b> and <b>“without DOF separtion”</b> methods are compared</li>
-                    <li>Effects of dynamically switching between 1DOF, 2DOF, and 3DOF operations are studied</li>
-                    <li>Correlations between “DOF” and “speed and precision of mainpulation” is researched</li>
+                        <div class="researchPaperWrapper">
+                            <hr>
+                            <h2>Award</h2>
+                            <ul>
+                                <li><h3>Award from the Ministry of Trade, Industry and Energy for the 'Industry-Academia Project Challenge' Contest</h3></li>
+                            </ul>
+                            <p style="margin: 0px; margin-top: 5px; margin-left: 20px;">
+                                Joohwan Chae, <b>Myoung Gon Kim</b>, JaeHyun Lee and Hyunmo Kang<br>                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pubContentsWrapper">
+                    <div class = "researchThumbnailWrapper">
+                        <div class = "researchTitle">
+                            <h3>Researching core technologies and fostering talents for simulated reality contents</h3>
+                            <i style = "font-size: 0.9em;">Funded by Information Technology Research Center <b>(ITRC)</b></i> <br>
+                            <i>Aug. 2021 ~ Dec. 2025(WIP)</i><br><br>
+                            <li>Pose estimation</li>
+                        </div>
+                        <div class="researchThumbnailBlockWrapper">
+                            <div class = "researchThumbnailBlock" style="background-image: url('pics/digital_human.png');"></div>
+                            <div class="researchViewMoreBtn" onClick="ResearchReadMore(this);">Read More 🔽</div>
+                        </div>
+                    </div>
+                    <div class = "researchDetailWrapper">
+                        <div style = "width: 100%; height:auto; overflow-y: auto; text-align: center; margin: auto;">
+                            <iframe width="650" height="450" src="https://www.youtube.com/embed/Z8ZpUZ42v9c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div> 
+                        <li>Digital human with cloth simulation</li>
+                        <li>Intraction with digital human in XR</li>
+                        <br><br>
 
+                        <div class="researchPaperWrapper">
+                            <hr>
+                            <h2>Paper</h2>
+                            <ul>
+                                <li><h3>ConvNeXtPose: A Fast Accurate Method for 3D Human Pose Estimation and Its AR Fitness Application in Mobile Devices</h3></li>
+                            </ul>
+                            <p style="margin: 0px; margin-top: 5px; margin-left: 20px;">
+                                Hong Son Nguyen, <b>Myoung Gon Kim</b>, Changbin Im, Sanghoon Han and JungHyun Han<br>
+                                <b>IEEE Access</b>, Vol. 11, pp. 117393-117402, October 2023.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pubContentsWrapper">
+                    <div class = "researchThumbnailWrapper">
+                        <div class = "researchTitle">
+                            <h3>Two-way interaction between real environments and virtual objects</h3>
+                            <i style = "font-size: 0.9em;">Funded by Institute for Information & communications Technology Planning & Evaluation <b>(IITP)</b></i> 
+                            <i>Aug. 2021 ~ Dec. 2027(WIP)</i><br><br>
+                            <li>Mid-air manipulation</li>
+                        </div>
+                        <div class="researchThumbnailBlockWrapper">
+                            <div class = "star_lab"></div>
+                            <div class="researchViewMoreBtn" onClick="ResearchReadMore(this);">Read More 🔽</div>
+                        </div>
+                    </div>
+                    <div class = "researchDetailWrapper">
+                        <div style = "width: 100%; height:auto; overflow-y: auto; text-align: center; margin: auto;">
+                            <iframe width="650" height="400" src="pics/cat.mp4"></iframe>
+                        </div>
+          
+                        <li>3D Reconstruction for XR system</li>
+                        <li>Interaction with virtual objects</li>
+
+                        <br><br>
+
+                        <div class="researchPaperWrapper">
+                            <hr>
+                            <h2>Paper</h2>
+                            <ul>
+                                <li><h3>Virtual object sizes for efficient and convenient mid-air manipulation</h3></li>
+                            </ul>
+                            <p style="margin: 0px; margin-top: 5px; margin-left: 20px;">
+                                <b>Myoung Gon Kim</b>, JiSeok Ryu, Jaemin Son, and JungHyun Han <br>
+                                <b>Computer Graphics International (CGI)</b>, September 12-16, 2022.<br>
+                                Published in <b>The Visual Computer</b>, 38.9-10 (2022): 3463-3474.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pubContentsWrapper">
+                    <div class = "researchThumbnailWrapper">
+                        <div class = "researchTitle">
+                            <h3>Autonomous driving for indoor robots</h3>
+                            <i style = "font-size: 0.9em;">At <b>Samsung Research Center</b></i> <br>
+                            <i>Mar. 2018 ~ Jul. 2021</i><br><br>
+                            <li>Sensor fusion</li>
+                            <li>SLAM</li>
+                        </div>
+                        <div class="researchThumbnailBlockWrapper">
+                            <div class = "researchThumbnailBlock" style="background-image: url('pics/samsung_retail_bot.png');"></div>
+                            <div class="researchViewMoreBtn" onClick="ResearchReadMore(this);">Read More 🔽</div>
+                        </div>
+                    </div>
+                    <div class = "researchDetailWrapper">
+
+                        <div class="researchPaperWrapper">
+                            <h2>Patents</h2>
+                            <ul>
+                                <li><h3>Robot and method for controlling thereof</h3></li>
+                            </ul>
+                            <p style="margin: 0px; margin-top: 5px; margin-left: 20px;">
+                                <b>Myoung Gon Kim</b>, Aron Baik, Eunsoll Chang, Mideum Choi, Heejun Choi<br>
+                                <ul style="margin:0px; margin-left: 20px;">
+                                    <li>US patent no.: US20220308591A1, Sep. 29, 2022.</li>
+                                    <li>WIPO patent no.: WO2022203150, Sep. 29, 2022.</li>
+                                    <li>Korean patent no.: KR20220132241A, Mar. 23, 2021.</li>
+                                </ul>
+                            </p>
+                            <ul>
+                                <li><h3>Electronic apparatus and controlling method thereof</h3></li>
+                            </ul>
+                            <p style="margin: 0px; margin-top: 5px; margin-left: 20px;">
+                                Eunsoll Chang, <b>Myoung Gon Kim</b>, Jewoong Ryu, Aron Baik<br>
+                                <ul style="margin:0px; margin-left: 20px;">
+                                    <li>EPO patent no.: EP4220082A1, May. 01, 2024.</li>
+                                    <li>US patent no.: US2023266143A1, Aug. 24, 2023.</li>
+                                    <li>WIPO patent no.: WO2022114551A1, Jun. 02, 2022.</li>
+                                    <li>Korean patent no.: KR10-2020-0159444, Nov. 25, 2020.</li>
+                                </ul>
+                            </p>
+                            <ul>
+                                <li><h3>Robot and controlling method thereof</h3></li>
+                            </ul>
+                            <p style="margin: 0px; margin-top: 5px; margin-left: 20px;">
+                                <b>Myoung Gon Kim</b>, Jewoong Ryu, Aron Baik, Eunsoll Chang,<br>
+                                <ul style="margin:0px; margin-left: 20px;">
+                                    <li>US patent no.: US20230213944A1, Jul. 06, 2023.</li>
+                                    <li>WIPO patent no.: WO2022059937A1, Mar. 24, 2022.</li>
+                                    <li>Korean patent no.: KR20220039101A, Sep. 21, 2020</li>
+                                </ul>
+                            </p>
+                            (Some of patents were transferred to a different primary author after I left Samsung.)
+                        </div>
+                    </div>
+                </div>
+                <div class="pubContentsWrapper">
+                    <div class = "researchThumbnailWrapper">
+                        <div class = "researchTitle">
+                            <h3>3D object manipulation in mobile virtual environment</h3>
+                            <i style = "font-size: 0.9em;">Funded by <b>Samsung Research Center</b></i> <br>
+                            <i>Apr. 2017 ~ Mar. 2018</i><br><br>
+                            <li>Mid-air manipulation</li>
+                        </div>
+                        <div class="researchThumbnailBlockWrapper">
+                            <div class = "researchThumbnailBlock" style="background-image: url('pics/interaction_with_vo.png'); background-size: 170%; background-position: 33% 78%;">
+                                
+                            </div>
+                            <div class="researchViewMoreBtn" onClick="ResearchReadMore(this);">Read More 🔽</div>
+                        </div>
+                    </div>
+                    <div class = "researchDetailWrapper">                        
+                        <div style = "width: 100%; height:auto; overflow-y: auto; text-align: center; margin: auto;">
+                            <iframe width="650" height="450" src="https://www.youtube.com/embed/G2_xtwKLYoA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <li>3D object manipulation system for mobile virtual environments (TIZEN)</li>
+                        <li>System integration with gesture recognition model and physics engine</li>
+
+                        <br><br>
+
+                        <div class="researchPaperWrapper">
+                            <hr>
+                            <h2>Paper</h2>
+                            <ul>
+                                <li><h3>Effects of switchable dof for mid-air manipulation in immersive virtual environments</h3></li>
+                            </ul>
+                            <p style="margin: 0px; margin-top: 5px; margin-left: 20px;">
+                                <b>Myoung Gon Kim</b> and JungHyun Han <br>
+                                <b>International Journal of Human–Computer Interaction (IJHCI)</b>, Vol. 35, No. 13, May 2019.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pubContentsWrapper">
+                    <div class = "researchThumbnailWrapper">
+                        <div class = "researchTitle" style = "width : calc(100% - 160px);">
+                            <h3>Drone navigation assistance system based on 360 camera and HMD</h3>
+                            <i style = "font-size: 0.9em;">Funded by National Research Foundation of Korea <b>(NRF)</b></i> <br>
+                            <i>Nov. 2016 ~ Mar. 2018</i><br><br>
+                            <li>Sensor fusion</li>
+                            <li>HCI in VR</li>
+                        </div>
+                        <div class="researchThumbnailBlockWrapper" style="width:150px;">
+                            <div class = "researchThumbnailBlock" style="background-image: url('pics/drone.png'); background-size: contain; width:150px;"></div>
+                            <div class="researchViewMoreBtn" onClick="ResearchReadMore(this);" style="margin-left:50px;">Read More 🔽</div>
+                        </div>
+                    </div>
+                    <div class = "researchDetailWrapper">
+                        <div style = "width: 100%; height:auto; overflow-y: auto; text-align: center; margin: auto;">
+                            <iframe width="650" height="400" src="pics/drone_1.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="650" height="400" src="pics/drone_2.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        </div>
+          
+                        <li>Sensor fusion (360 camera and HMD) for 3D Reconstruction in drone navigation system</li>
+                        <li>UI/UX for controlling drone in VR</li>
+                    </div>
+                </div>
+                <div class="pubContentsWrapper">
+                    <div class = "researchThumbnailWrapper">
+                        <div class = "researchTitle">
+                            <h3>Integrated rendering-motion platform for walk-through on Moon and Mars</h3>
+                            <i style = "font-size: 0.9em;">Funded by Korea Creative Content Agency <b>(KOCCA)</b></i><br>
+                            <i>Mar. 2016 ~ Feb. 2017</i><br><br>
+                            <li>Retargeted jumping in VR</li>
+                        </div>
+                        <div class="researchThumbnailBlockWrapper">
+                            <div class = "researchThumbnailBlock" style="background-image: url('pics/2016_moon_mars.png'); background-size: 120%;"></div>
+                            <div class="researchViewMoreBtn" onClick="ResearchReadMore(this);">Read More 🔽</div>
+                        </div>
+                    </div>
+                    <div class = "researchDetailWrapper">
+                        <div style = "width: 100%; height:auto; overflow-y: auto; text-align: center; margin: auto;">
+                            <iframe width="650" height="400" src="https://www.youtube.com/embed/4X_GZ1i90BE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+          
+                        <li>Jump motion in virtual environments is studied</li>
+                        <li>Based on the study, retargeted jump is developed</li>
+
+                        <br><br>
+
+                        <div class="researchPaperWrapper">
+                            <hr>
+                            <h2>Paper</h2>
+                            <ul>
+                                <li><h3>Scaled Jump in Gravity-reduced Virtual Environments</h3></li>
+                            </ul>
+                            <p style="margin: 0px; margin-top: 5px; margin-left: 20px;">
+                                <b>Myoung Gon Kim</b>, SungIk Cho, Tanh Quang Tran, Seong-Pil Kim, Ohung Kwon, and JungHyun Han <br>
+                                <b>IEEE VR</b>, March 18-23, 2017, Los Angeles, California, USA.<br>
+                                Published in <b>IEEE Transactions on Visualization and Computer Graphics (TVCG)</b>, Vol. 23, No. 4, April 2017, pp. 1360-1368.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pubContentsWrapper">
+                    <div class = "researchThumbnailWrapper">
+                        <div class = "researchTitle">
+                            <h3>Mixed reality system</h3>
+                            <i style = "font-size: 0.9em;">Undergraduate project - Interactive contents (COSE43300)</i> <br>
+                            <i>1st semester 2015</i><br><br>
+                            <li>Sensor fusion</li>
+                        </div>
+                        <div class="researchThumbnailBlockWrapper">
+                            <div class = "researchThumbnailBlock" style="background-image: url('pics/mr_undergrad.png'); background-size: 90%;"></div>
+                            <div class="researchViewMoreBtn" onClick="ResearchReadMore(this);">Read More 🔽</div>
+                        </div>
+                    </div>
+                    <div class = "researchDetailWrapper">
+                        <div style = "width: 100%; height:auto; overflow-y: auto; text-align: center; margin: auto;">
+                            <iframe width="650" height="450" src="https://www.youtube.com/embed/FkZZUx4qSf4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div> 
+                        <li>HMD and Kinect are integrated with Unity</li>
+                        <li>Pointcloud based collision detection</li>
+                    </div>
+                </div>
+                <div class="pubContentsWrapper"style = "border:none">
+                    <div class = "researchThumbnailWrapper">
+                        <div class = "researchTitle">
+                            <h3>Shooting game</h3>
+                            <i style = "font-size: 0.9em;">Undergraduate project - Computer graphics (COSE33100)</i> <br>
+                            <i>2nd semester 2014</i><br><br>
+                            <li>Rigid body collision</li>
+                    </div>
+                        <div class="researchThumbnailBlockWrapper">
+                            <div class = "researchThumbnailBlock" style="background-image: url('pics/smaug.png'); "></div>
+                            <div class="researchViewMoreBtn" onClick="ResearchReadMore(this);">Read More 🔽</div>
+                        </div>
+                    </div>
+                    <div class = "researchDetailWrapper">
+                        <div style = "width: 100%; height:auto; overflow-y: auto; text-align: center; margin: auto;">
+                            <iframe width="650" height="450" src="https://www.youtube.com/embed/6gUBlU1426k?start=244" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>    
+                    <li>First person view shooting game based on OpenGL</li>
+                    <li>Rigid body collision is implemented from the scratch (c++ with Eigen library)</li>
+                    </div>
                 </div>
             </div>
-            <div style='overflow-y: auto; width: 80%; margin:auto; margin-bottom: 100px;'>
-                <div style=' width: 100%'>
-                    <h3>Interaction with virtual objects </h3>
-                    <i>Funded by Samsung Electronics</i><br> March 2017 ~ Feb 2018<br><br>
-                    <iframe width="800" height="600" align="center" src="https://www.youtube.com/embed/G2_xtwKLYoA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
-                    <li>3D object manipulation system for mobile virtual environments is studied</li>
-                    <li><b>Select</b>, <b>deselect</b>, <b>translate</b>, <b>rotate</b> and <b>scale</b> operations are implemented</li>
-                    <li>For natural operations, gestures including <b>Pinch</b>, <b>Unfold</b> and <b>Point</b> are used</li>
-                    <li>Collaborated with gesture recognition and physics engine for system integration</li>
 
-                </div>
-            </div>
-            <div style='overflow-y: auto; width: 80%; margin:auto; margin-bottom: 100px;'>
-                <div style=' width: 100%'>
-                    <h3>Effects of Switchable DOF for Mid-Air Manipulation in Immersive Virtual Environments </h3>
-                    <i><u>MyoungGon Kim</u>, and JungHyun Han. </i><br> International Journal of Human–Computer Interaction (2018): 1-13.<br><br>
-                    <iframe width="800" height="450" align="center" src="https://www.youtube.com/embed/3Am4Rf2KD-I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
-                    <li>Degrees of freedom (DOF) during 3D object manipulation is studied</li>
-                    <li><b>“Switchable DOF,” “with DOF separation”</b> and <b>“without DOF separation”</b> methods are compared</li>
-                    <li>Effects of dynamically switching between 1DOF, 2DOF, and 3DOF operations are studied</li>
-                    <li>Correlations between “DOF” and “speed and precision of mainpulation” are researched</li>
 
-                </div>
-            </div>
-            <div style='overflow-y: auto; width: 80%; margin:auto; margin-bottom: 100px;'>
-                <div style=' width: 100%'>
-                    <h3>Scaled Jump in Gravity-reduced Virtual Environments </h3>
-                    <i><u>MyoungGon Kim</u>, Sunglk Cho, Tanh Quang Tran, Seong-Pil Kim, Ohung Kwon, and JungHyun Han. </i><br> IEEE transactions on visualization and computer graphics 23.4 (2017): 1360-1368.<br><br>
-                    <iframe width="800" height="450" align="center" src="https://www.youtube.com/embed/4X_GZ1i90BE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
-                    <li>Jump motion is up or down scaled in virtual environments</li>
-                    <li>Extent to which a jump can be scaled without the discrepancy being noticed by the user is measured</li>
-                    <li>Based on the tolerable range of scaling, <b>retargeted jump </b>is developed</li>
-                    <li>In the <b>retargeted jump</b>, a user can jump onto virtaul objects while jumping on the real-world flat floor</li>
-                </div>
-            </div>
+            
         </div>
         <div class="contentWrapper">
-            <h2>Professional Experiences</h2>
+            <a name="workexp"></a>
+            <h2>Work Experiences</h2>
             <hr><br>
-            <div style='overflow-y: auto; width: 80%; margin:auto;margin-bottom: 50px;'>
+            <div style='overflow-y: auto; width:90%; margin:auto;margin-bottom: 50px;'>
                 <div style=' width: 100%'>
                     <h3>Samsung Research Center </h3>
-                    <i>Navigation task group, Robot Intelligence team</i><br> March 2018 ~ July 2021
-                    <div style="height: 400px; width: 100%; margin:auto; margin-bottom: 20px; margin-top: 20px; background-image: url('pics/Samsung-Bot-Retail.jpg');  background-repeat: no-repeat; 
+                    <b>Research engineer</b><br>
+                    <i>Navigation group, Robot Intelligence team</i><br> March 2018 ~ July 2021
+                    <div style="height: 550px; width: 100%; margin:auto; margin-bottom: 20px; margin-top: 20px; background-image: url('pics/samsung_robots.jpg');  background-repeat: no-repeat; 
                     background-size: cover; background-position: center;">
                     </div>
-                    <li>Sensor fusion for autonomous driving of <b>Samsung retail bot</b> and <b>Robotic vacuum cleaner</b></li>
+                    <li>Sensor fusion and SLAM development for autonomous driving. </li>
+                    <li>Particiapted in projects including <b>Samsung retail bot</b>, <b>Robotic vacuum cleaner</b> and <b>Ballie</b>.</li>
 
                 </div>
             </div>
-            <div style='overflow-y: auto; width: 80%; margin:auto;margin-bottom: 50px;'>
+            <div style='overflow-y: auto; width: 90%; margin:auto;margin-bottom: 50px;'>
                 <div style=' width: 100%'>
                     <h3>Swizzle (music streaming startup)</h3>
+                    <b>Internship</b><br>
                     <i>Singapore development team, Ideabove inc.</i><br> March ~ July 2017
                     <div style="height: 500px; width: 100%; margin:auto; margin-bottom: 20px; margin-top: 20px; background-image: url('pics/swizzle.jpg');  background-repeat: no-repeat; 
                         background-size: cover; background-position: center;">
                     </div>
-                    <li>Front-end development internship</li>
+                    <li>Front-end development</li>
                     <li>Participated in <b>Startup Asia 2017</b></li>
 
                 </div>
@@ -125,31 +499,10 @@
 
         </div>
         <div class="contentWrapper">
+            <a name="extraact"></a>
             <h2>Extra Activities</h2>
             <hr><br>
-            <!-- <div style='overflow-y: auto; width: 80%; margin:auto;margin-bottom: 50px;'>
-                <div style=' width: 100%'>
-                    <h3>Book illustration</h3> March 2016~ March 2018
-                    <div style="height: 500px; width: 100%; margin:auto; margin-bottom: 20px; margin-top: 20px; background-image: url('http://media.korea.ac.kr/books/covers/2/eng.jpg');  background-repeat: no-repeat; 
-                            background-size: contain; background-position: center;">
-                    </div>
-                    <li>Illuststrations of the book, “Computer Graphics with OpenGL ES written by prof. JungHyun Han” are designed</li>
-
-                </div>
-            </div> -->
-            <!-- <div style='overflow-y: auto; width: 80%; margin:auto;margin-bottom: 50px;'>
-                <div style=' width: 100%'>
-                    <h3>Undergraduate student project</h3>
-                    <i>Computer Graphics term project</i><br> 2nd semester 2014<br><br>
-                    <iframe width="800" height="450" align="center" src="https://www.youtube.com/embed/6gUBlU1426k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <br><br>
-                    <li>OpenGL based 1st person view shooting game </li>
-                    <li>Go close to coins to pick them and throw coins to the dragon to kill it</li>
-                    <li>Cylinder bounding volume is developed to implement coin collisons </li>
-
-                </div>
-            </div> -->
-            <div style='overflow-y: auto; width: 80%; margin:auto;margin-bottom: 50px;'>
+            <div style='overflow-y: auto; width: 90%; margin:auto;margin-bottom: 50px;'>
                 <div style=' width: 100%'>
                     <h3>Silicon valley field trip</h3>
                     <i>Funded by Natioanl IT Industry Promotion Agency</i><br> Jan and July 2014
@@ -157,11 +510,11 @@
                             background-size: cover; background-position: center;">
                     </div>
                     <li>A week of trip each in January and July 2014</li>
-                    <li>Visited multiple companies including Intel, Google and Dropbox</li>
+                    <li>Mentoring program at Silicon valley companies including Intel, Google and Dropbox</li>
 
                 </div>
             </div>
-            <div style='overflow-y: auto; width: 80%; margin:auto;margin-bottom: 50px;'>
+            <div style='overflow-y: auto; width: 90%; margin:auto;margin-bottom: 50px;'>
                 <div style=' width: 100%'>
                     <h3>International Association for the Exchange of Students for Technical Experience (IAESTE)</h3>
                     <i>Funded by Engneering department of Korea University</i><br>2014
@@ -169,20 +522,20 @@
                                 background-size: cover; background-position: center;" onmouseover="backgroundImg(this, 'pics/IAESTE_2.jpg');" onmouseout="backgroundImg(this, 'pics/IAESTE_1.jpg');">
                     </div>
                     <li>Attended annual conference 2014 at Ecuador as a representative of Korean students</li>
-                    <li>Worked as a volunteer of the student events in Korea during 2014</li>
+                    <li>Volunteered in "Internship programs in Korea" during 2014</li>
 
                 </div>
             </div>
 
-            <div style='overflow-y: auto; width: 80%; margin:auto;margin-bottom: 50px;'>
+            <div style='overflow-y: auto; width: 90%; margin:auto;margin-bottom: 50px;'>
                 <div style=' width: 100%'>
-                    <h3>Military Service</h3> Jan 2010 ~ Nov 2011
-                    <div style="height: 400px; width: 100%; margin:auto; margin-bottom: 20px; margin-top: 20px; background-image: url('pics/military01.jpg');  background-repeat: no-repeat; 
+                    <h3>Military Service (Call of duty)</h3> Jan 2010 ~ Nov 2011
+                    <div style="height: 300px; width: 100%; margin:auto; margin-bottom: 20px; margin-top: 20px; background-image: url('pics/military01.jpg');  background-repeat: no-repeat; 
                                 background-size: contain; background-position: center;" onmouseover="backgroundImg(this, 'pics/military02.jpg');" onmouseout="backgroundImg(this, 'pics/military01.jpg');">
                     </div>
                     <li>Computer Technician</li>
                     <li>81th Maintenance Battalion, 3rd Logistics Support Command, Republic of Korea Army</li>
-                    <li>Server, Security devices and Intranet network maintenance</li>
+                    <li>Maintenance of Server, Security devices and Intranet network</li>
                 </div>
             </div>
 

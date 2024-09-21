@@ -20,7 +20,7 @@ a {
     padding: 20px;
     border: 2px solid #eeeeee;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .contentWrapper {
@@ -299,20 +299,41 @@ a {
       opacity: 1;
     }
   }
-  .remoteWrapper{
-    width: 180px;
-    height:165px;
+  .remoteWrapperWrapper{
+    width: 860px;
+    height: 42px;
     position: fixed;
+    background-color: white;
+    left : calc(50% - 431px);
+    top: 0px;
+    z-index: 100;
+  }
+  
+  .remoteWrapper{
+    width: 820px;
+    height: 32px;
+    margin-top:10px;
+    margin-left:10px;
     padding:10px;
-    margin-left:15px;
     border: 1px solid gray;
     border-radius: 8px;
     line-height: 2em;
-    left: 1110px;
+    background-color: white;
   }
   .remoteWrapper li{
     cursor: pointer;
+    margin:auto;
+    margin-right:50px;
+    float:left;
   }
+  .remoteWrapper li:first-child{
+    margin-left:20px;
+  }
+  .remoteWrapper li:last-child{
+    margin-right:0px;
+  }
+    
+
   .remoteWrapper a{
     text-decoration: none;
   }

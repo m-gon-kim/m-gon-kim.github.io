@@ -55,13 +55,20 @@ a {
     color: inherit;
   }
 
-.profilePic {
+.profilePicWrapper{
     width: 200px;
     height: 200px;
     border-radius: 200px;
     overflow: hidden;
+    border: solid 1px;
+    border-color: gainsboro;
+
+}
+.profilePic {
+    margin: auto;
+    width: 150px;
+    height: 200px;
     background-size:cover;
-    background-position: 50% -25px;
     
 }
 

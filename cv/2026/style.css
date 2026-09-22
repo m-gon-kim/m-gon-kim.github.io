@@ -103,6 +103,11 @@ a {
     width: 99%;
     margin-left: 1%;
 }
+.cvInfoContents ul {
+    margin: 0;          /* 위아래 1em 기본 여백 제거 */
+    padding-left: 1.2em; /* 기본 40px 들여쓰기가 과하면 조절 */
+}
+
 
 .cvInfoContentsRow {
     overflow-y: auto;
